@@ -7,17 +7,17 @@ import PackageDescription
 import CompilerPluginSupport
 
 let package = Package(
-    name: "Macros",
+    name: "Copyable",
     platforms: [.macOS(.v10_15), .iOS(.v13), .tvOS(.v13), .watchOS(.v6), .macCatalyst(.v13)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "Macros",
-            targets: ["Macros"]
+            name: "Copyable",
+            targets: ["Copyable"]
         ),
         .executable(
-            name: "MacrosClient",
-            targets: ["MacrosClient"]
+            name: "CopyableClient",
+            targets: ["CopyableClient"]
         ),
     ],
     dependencies: [
@@ -28,7 +28,7 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         // Macro implementation that performs the source transformation of a macro.
         .macro(
-            name: "MacrosImplementation",
+            name: "CopyableImplementation",
             dependencies: [
                 .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
                 .product(name: "SwiftCompilerPlugin", package: "swift-syntax")
@@ -36,16 +36,16 @@ let package = Package(
         ),
 
         // Library that exposes a macro as part of its API, which is used in client programs.
-        .target(name: "Macros", dependencies: ["MacrosImplementation"]),
+        .target(name: "Copyable", dependencies: ["CopyableImplementation"]),
 
         // A client of the library, which is able to use the macro in its own code.
-        .executableTarget(name: "MacrosClient", dependencies: ["Macros"]),
+        .executableTarget(name: "CopyableClient", dependencies: ["Copyable"]),
 
         // A test target used to develop the macro implementation.
         .testTarget(
-            name: "MacrosTests",
+            name: "CopyableTests",
             dependencies: [
-                "MacrosImplementation",
+                "CopyableImplementation",
                 .product(name: "SwiftSyntaxMacrosTestSupport", package: "swift-syntax"),
             ]
         ),

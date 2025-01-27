@@ -6,7 +6,7 @@ import SwiftSyntaxBuilder
 import SwiftSyntaxMacros
 
 @main
-struct MacrosPlugin: CompilerPlugin {
+struct CopyablePlugin: CompilerPlugin {
     let providingMacros: [Macro.Type] = [
         CopyableMacro.self
     ]

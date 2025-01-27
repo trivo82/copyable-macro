@@ -4,4 +4,4 @@
 /// source code from: https://shopify.engineering/kotlin-style-copy-function-swift-structs
 /// Used to make a copy of the struct while updating values passed in as parameters into a closure that receives the builder as the sole argument, and allows you to set overrides for selected properties.
 @attached(extension, conformances: Equatable, names: arbitrary)
-public macro Copyable() = #externalMacro(module: "MacrosImplementation", type: "CopyableMacro")
+public macro Copyable() = #externalMacro(module: "CopyableImplementation", type: "CopyableMacro")
