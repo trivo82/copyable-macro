@@ -1,5 +1,5 @@
 # copyable-macro
-Copyable is a Swift Macro used to bring Kotlin's `copy` functionality to Swift.
+Inspired by the blog https://shopify.engineering/kotlin-style-copy-function-swift-structs by Scott Birksted, Copyable is a Swift Macro used to bring Kotlin's `copy` functionality on data classes to Swift's structs. 
  
 
 ## Functionality
@@ -15,10 +15,10 @@ dependencies: [
 ```
 
 ## Usage
+1. Add the Copyable package as your dependency in the project file 
 
-1.
 
-```swift
+2. ```swift
 import Copyable
 
 @Copyable
