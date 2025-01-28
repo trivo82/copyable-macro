@@ -17,8 +17,8 @@ dependencies: [
 ## Usage
 1. Add the Copyable package as your dependency in the project file 
 
-
-2. ```swift
+2. 
+```swift
 import Copyable
 
 @Copyable
