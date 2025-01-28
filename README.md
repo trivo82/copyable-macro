@@ -1,5 +1,5 @@
 # copyable-macro
-Inspired by the blog https://shopify.engineering/kotlin-style-copy-function-swift-structs by Scott Birksted, Copyable is a Swift Macro used to bring Kotlin's `copy` functionality on data classes to Swift's structs. 
+Inspired by the [blog](https://shopify.engineering/kotlin-style-copy-function-swift-structs) by Scott Birksted, Copyable is a Swift Macro used to bring Kotlin's `copy` functionality on data classes to Swift's structs. 
  
 
 ## Functionality
@@ -39,3 +39,5 @@ print("name: \(student2.name) grade: \(student2.grade))
 ```
 This should print: "name: Henry grade: 100"
 
+## Reference
+[A Kotlin Style .copy Function for Swift Structs](https://shopify.engineering/kotlin-style-copy-function-swift-structs)
