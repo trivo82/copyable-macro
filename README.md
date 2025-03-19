@@ -1,3 +1,6 @@
+https://img.shields.io/badge/platforms-macOS|iOS|tvOS|watchOS|macCatalyst|-blue
+https://img.shields.io/badge/swift-syntax|510.0.3-red
+
 # copyable-macro
 Inspired by the [blog](https://shopify.engineering/kotlin-style-copy-function-swift-structs) by Scott Birksted, Copyable is a Swift Macro used to bring Kotlin's `copy` functionality on data classes to Swift's structs. 
  
